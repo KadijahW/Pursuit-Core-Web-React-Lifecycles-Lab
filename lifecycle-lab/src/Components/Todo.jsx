@@ -1,9 +1,16 @@
 import React from 'react';
 
-class Todo extends React.Component{
-    constructor(){
-        super();
-        console.log("child constructor called")
-    }
+
+const Todo = (props) => {
+    const { todoItem, handleDelete} = props;
+
+    return (
+<div>
+    <li>
+        <p>{todoItem} <button onClick={handleDelete} value={todoItem}>x</button> </p>
+
+    </li>
+</div>
+    )
 }
 export default Todo;
